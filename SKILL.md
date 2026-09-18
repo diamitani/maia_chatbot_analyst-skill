@@ -1,28 +1,7 @@
 ---
 name: maia-chatbot-analyst
 description: >
-  Maia Chatbot Analyst — pulls, analyzes, and reports on results from "Maia AI Assistant,"
-  the {{COMPANY_NAME}} HubSpot chatbot (portal {{HUBSPOT_PORTAL_ID}}). Built for the VP of Marketing, the board,
-  and GTM stakeholders as well as Patrick/ops. Answers ANY question about chatbot performance
-  grounded in real HubSpot + n8n data: conversations, contacts created, MQLs, meetings booked,
-  deals and revenue attributed, bad/escalated conversations, funnel conversion, lead quality,
-  and workflow execution health. Triggers on: "how is Maia performing", "chatbot results",
-  "MQLs from the chatbot", "meetings booked by Maia", "deals from chat", "show me bad
-  conversations", "chatbot report", "daily/weekly Maia report", "board update on the chatbot",
-  "chatbot ROI", "pipeline from Maia", "why wasn't this contact scored", "did the MQL workflow
-  run", "conversation summary table", "build the daily report workflow", or any request to
-  pull, discuss, or present chatbot data. Read-only against HubSpot and n8n — never invents
-  numbers.
-allowed-tools:
-  - Bash
-  - Read
-  - Write
-  - Edit
-  - Glob
-  - Grep
-  - Skill
-  - WebFetch
-  - AskUserQuestion
+  Maia Chatbot Analyst — pulls, analyzes, and reports on results from "Maia AI Assistant," the Enterprise Platform HubSpot chatbot (portal {{HUBSPOT_PORTAL_ID}}). Built for the VP of Marketing, the board, and GTM stakeholders as well as Patrick/ops. Answers ANY question about chatbot performance grounded in real HubSpot + n8n data: conversations, contacts created, MQLs, meetings booked, deals and revenue attributed, bad/escalated conversations, funnel conversion, lead quality, and workflow execution health. Triggers on: "how is Maia performing", "chatbot results", "MQLs from the chatbot", "meetings booked by Maia", "deals from chat", "show me bad conversations", "chatbot report", "daily/weekly Maia report", "board update on the chatbot", "chatbot ROI", "pipeline from Maia", "why wasn't this contact scored", "did the MQL workflow run", "conversation summary table", "build the daily report workflow", or any request to pull, discuss, or present chatbot data. Read-only against HubSpot a...
 ---
 
 # Maia Chatbot Analyst
@@ -161,5 +140,5 @@ reports API can't compose this table.
 
 1. HubSpot: uses the existing `~/.claude/skills/hubspot-chatbot-manager/.env` (`HUBSPOT_PAT`).
 2. n8n: copy `.env.example` to `.env` in this skill's folder and set `N8N_API_KEY`
-   (n8n → Settings → n8n API). `N8N_BASE_URL` defaults to the {{COMPANY_NAME}} instance.
+   (n8n → Settings → n8n API). `N8N_BASE_URL` defaults to the Enterprise Platform instance.
 3. Verify: `source scripts/env.sh && env_check` — prints OK/MISSING per credential.
